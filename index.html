@@ -17,7 +17,9 @@
         <nav class="navigation">
           <a class="logo" href="/">Web<span class="studio">Studio</span></a>
           <ul class="nav-list">
-            <li class="nav-line"><a class="nav-link studio-link" href="./index.html">Студия</a></li>
+            <li class="nav-line">
+              <a class="nav-link studio-link nav-link-current" href="./index.html">Студия</a>
+            </li>
             <li class="nav-line">
               <a class="nav-link portfolio-link" href="./portfolio.html">Портфолио</a>
             </li>
@@ -49,7 +51,7 @@
       <section class="section offer">
         <div class="offer-text">
           <h1 class="main-title">Эффективные решения для вашего бизнеса</h1>
-          <button class="order" type="button">Заказать услугу</button>
+          <button class="order" data-modal-open type="button">Заказать услугу</button>
         </div>
       </section>
       <section class="section about-us">
@@ -108,25 +110,40 @@
           <h2 class="section-title">Чем мы занимаемся</h2>
           <ul class="what-we-do-images">
             <li class="what-we-do-image">
-              <img
-                src="./images/programmer-typing.jpg"
-                alt="Программист печатает на компьютере"
-                width="370"
-              />
+              <div class="what-we-do-thumb">
+                <img
+                  src="./images/programmer-typing.jpg"
+                  alt="Программист печатает на компьютере"
+                  width="370"
+                />
+                <div class="what-we-do-description">
+                  <h3 class="image-description">Десктопные приложения</h3>
+                </div>
+              </div>
             </li>
             <li class="what-we-do-image">
-              <img
-                src="./images/phone-design.jpg"
-                alt="Программист выбирает дизайн телефона"
-                width="370"
-              />
+              <div class="what-we-do-thumb">
+                <img
+                  src="./images/phone-design.jpg"
+                  alt="Программист выбирает дизайн телефона"
+                  width="370"
+                />
+                <div class="what-we-do-description">
+                  <h3 class="image-description">Мобильные приложения</h3>
+                </div>
+              </div>
             </li>
             <li class="what-we-do-image">
-              <img
-                src="./images/color-pallette.jpg"
-                alt="Дизайнер использует палитру цветов"
-                width="370"
-              />
+              <div class="what-we-do-thumb">
+                <img
+                  src="./images/color-pallette.jpg"
+                  alt="Дизайнер использует палитру цветов"
+                  width="370"
+                />
+                <div class="what-we-do-description">
+                  <h3 class="image-description">Дизайнерские решения</h3>
+                </div>
+              </div>
             </li>
           </ul>
         </div>
@@ -373,5 +390,15 @@
         </div>
       </div>
     </footer>
+    <div class="backdrop is-hidden" data-modal>
+      <div class="modal">
+        <button class="modal-close-button" data-modal-close>
+          <svg class="icon-close" width="11px" height="11px">
+            <use href="./images/sprite.svg#icon-close"></use>
+          </svg>
+        </button>
+      </div>
+    </div>
+    <script src="./js/modal.js"></script>
   </body>
 </html>
